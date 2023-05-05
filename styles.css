@@ -1,0 +1,177 @@
+/* press-start-2p-regular - latin */
+@font-face {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    src: url('press-start-2p-v8-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Press Start 2P Regular'), local('PressStart2P-Regular'),
+         url('press-start-2p-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('press-start-2p-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('press-start-2p-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('press-start-2p-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('press-start-2p-v8-latin-regular.svg#PressStart2P') format('svg'); /* Legacy iOS */
+  }
+  
+
+body {
+    /*@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+    gonna need this for codepen*/
+    font-family: 'Press Start 2P';
+    background-color: rgb(36, 35, 35);
+    font-size: 17px;
+    color: rgb(84, 124, 20);
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+.timer__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1.title {
+ font-size: 2.25rem;
+ text-align: center;
+ padding: 1%;    
+}
+
+input[name=minutes] {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    color: rgba(84, 124, 20, .8);
+    caret-color: rgb(105, 150, 33); 
+    padding: 7px;
+    border: solid 2px rgb(84, 124, 20);
+    border-radius: 2.5%;
+    background-color: transparent;
+    margin-bottom: 7%; 
+}
+
+.display {
+    width: auto; 
+    margin: 3%;
+}
+
+.display__time-left, .mission_complete {
+    text-align: center;
+}
+
+.mission_complete {
+    font-size: 0.75rem;
+}
+
+.para {
+    margin: 1% 2%;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    font: inherit;
+    background-color: transparent;
+    height: 60px;
+    font-size: inherit;
+    border-radius: 3.75%;
+    border: solid 3px rgb(84, 124, 20);
+    color: rgb(84, 124, 20);
+    margin-bottom: 4%;
+}
+
+button:active {
+    animation: pulse 0.26s;
+    -webkit-animation: pulse 0.26s;
+    -moz-animation: pulse 0.26s;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: rgba(84, 124, 20, 0) 0 0 0 0;
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: rgba(84, 124, 20, .8) 0 0 0px 5px;
+        transform: scale(1.025);
+    }
+
+    75% {
+        box-shadow: rgba(84, 124, 20, 1) 0px 15px;
+        transform: scale(1.1);
+    }
+
+    100% {
+        box-shadow: rgba(84, 124, 20, 1) 0px 30px;
+        transform: scale(1.15);
+    }
+}
+
+   
+
+
+/*** Media Queries ***/
+
+@media screen and (min-width: 600px){
+    h1.title {
+        font-size: 3rem;  
+    }
+
+    h1.display__time-left {
+        font-size: 2.1rem;
+    }
+
+    .para {
+        font-size: 1.33rem;
+    }
+
+    .mission_complete {
+        font-size: 0.95rem;
+    }
+
+    .timer__controls {
+        display: unset;
+        justify-content: unset;
+        align-items: unset;  
+    }
+
+    form[name=customForm] {
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        margin: 3%;
+        font-size: 20pt;
+    }
+
+    input[name=minutes] {
+        align-self: baseline;
+        margin-top: 3%;   
+    }
+
+    button {
+        width: 40%;
+        height: 65px; 
+
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    h1.title {
+        font-size: 3.5rem;
+    }
+
+    h1.display__time-left {
+        font-size: 2.33rem;
+    }
+
+    
+}
+
+
